@@ -59,6 +59,16 @@ function serve() {
     watch(paths.img.src, series(imgs, reload));
 }
 
+const bootstrapCSS = () => {
+    return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+        .pipe(dest('dist/css'));
+}
+
+const bootstrapJS = () => {
+    return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+        .pipe(dest('dist/js'));
+}
+
 const build = series(parallel(html, style, scripts, imgs));
 
 exports.html = html;
