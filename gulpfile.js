@@ -42,7 +42,9 @@ function scripts() {
 }
 
 function imgs() {
-    return src(paths.img.src)
+    return src(paths.img.src, {encoding: false})
+
+
         // .pipe(imagemin())
         .pipe(dest(paths.img.dest));
 }
@@ -50,7 +52,7 @@ function imgs() {
 function reload(done) { browserSync.reload(); done(); }
 
 function serve() {
-    browserSync.init({ server: { baseDir: "dist" }, open: false, notify: false });
+    browserSync.init({ server: { baseDir: "dist" }, open: true, notify: false });
     watch(paths.html.src, html);
     watch(paths.scss.src, style);
     watch(paths.js.src, scripts);
