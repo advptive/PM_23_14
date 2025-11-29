@@ -44,6 +44,7 @@ function scripts() {
 function imgs() {
     return src(paths.img.src, {encoding: false})
 
+
         // .pipe(imagemin())
         .pipe(dest(paths.img.dest));
 }
