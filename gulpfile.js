@@ -6,6 +6,7 @@ const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
+const fileinclude = require('gulp-file-include');
 
 
 const paths = {
@@ -17,9 +18,15 @@ const paths = {
 
 function html() {
     return src(paths.html.src)
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file',
+            indent: true,
+        }))
         .pipe(rename(p => { p.dirname = ""; }))
         .pipe(dest(paths.html.dest))
         .pipe(browserSync.stream());
+
 }
 
 
