@@ -1,13 +1,25 @@
+@use'variables/variables.scss' as *;
+// Sidebar styles
+@use'sidebar/sidebar.scss';
+// Main content styles
+@use'main-content/main-content.scss';
+//footer styles
+@use'footer/footer.scss';
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Global styles
 body {
-  background: #ddd2d2;
-
-  img{
-    width: 100%;
-    height: 200px;
-  }
-
-  h1 {
-    text-align: center;
-    color: #0c5080;
-  }
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: $text-dark;
+  display: flex;
 }
+
+.container-fluid > .row {
+  display: flex;
+ 
+}
+
+
+

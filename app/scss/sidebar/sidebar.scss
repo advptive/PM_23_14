@@ -1,0 +1,122 @@
+@use'../variables/variables.scss' as *;
+
+.sidebar {
+    background-color: $sidebar-bg;
+    color: white;
+    width: 300px;
+    flex-direction: column;
+    display: flex;
+    padding: 2rem 1.5rem;
+  
+    .profile-section {
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+  
+      .profile-image-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+  
+        .profile-image {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          background-color: #cbd5e0;
+          outline: 4px solid white;
+          outline-offset: 10px;
+        }
+      }
+    }
+  
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      letter-spacing: 1px;
+  
+    }
+  
+    .contact-section {
+      margin-bottom: 2rem;
+      flex-grow: 1;
+      
+  
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+  
+        .contact-icon {
+          width: 20px;
+          margin-right: 1rem;
+          margin-top: 0.7rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+  
+        .contact-info {
+          flex: 1;
+  
+          .contact-label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            
+          }
+  
+          .contact-value {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  
+    .skills-section {
+      margin-bottom: 2rem;
+  
+      .skill-category {
+        margin-bottom: 1.5rem;
+  
+        .skill-category-title {
+          font-size: 1.3rem;
+          font-weight: bold;
+          margin-bottom: 0.8rem;
+          color: rgba(255, 255, 255, 0.9);
+        }
+  
+        .skill-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+  
+          li {
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  
+    .social-section {
+      .social-item {
+        margin-bottom: 1rem;
+  
+        strong {
+          display: block;
+          font-size: 0.9rem;
+          margin-bottom: 0.2rem;
+        }
+  
+        .social-link {
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+  
