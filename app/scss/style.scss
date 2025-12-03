@@ -2,18 +2,15 @@
 $sidebar-bg: #273347;
 $main-bg: #ffffff;
 $text-dark: #2d3748;
+$text-description: #c0c0c0;
 $text-light: #403f41;
-$accent-color: #4299e1;
-$border-color: #e2e8f0; 
+
 
 // Global styles
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
   color: $text-dark;
-  
-  
-
 }
 
 .container-fluid > .row {
@@ -75,7 +72,7 @@ body {
       .contact-icon {
         width: 20px;
         margin-right: 1rem;
-        margin-top: 0.2rem;
+        margin-top: 0.7rem;
         color: rgba(255, 255, 255, 0.8);
       }
 
@@ -85,7 +82,7 @@ body {
         .contact-label {
           font-weight: bold;
           font-size: 0.9rem;
-          margin-bottom: 0.2rem;
+          
         }
 
         .contact-value {
@@ -103,7 +100,7 @@ body {
       margin-bottom: 1.5rem;
 
       .skill-category-title {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         font-weight: bold;
         margin-bottom: 0.8rem;
         color: rgba(255, 255, 255, 0.9);
@@ -144,6 +141,7 @@ body {
 // Main content styles
 .main-content {
   background-color: $main-bg;
+  width: 800px;
  
   
 
@@ -154,20 +152,28 @@ body {
     .name {
       font-size: 3rem;
       font-weight: 300;
-      font-family: "Open Sans", Arial, sans-serif;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
       color: $text-light;
+      
+    }
 
-      .surname {
-        font-weight: bold;
-        color: $text-dark;
-      }
+    .first-name {
+      font-weight: 100;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .surname {
+      font-weight: bold;
+      color: $text-dark;
+    }
+
   
     }
 
     .title {
       font-size: 1.4rem;
       color: $text-light;
+      margin-top: 0;
       margin-bottom: 2rem;
       letter-spacing: 1px;
     }
@@ -176,15 +182,16 @@ body {
 
     .intro-section {
       .intro-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
         color: $text-dark;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
       }
 
       .intro-text {
-        color: $text-light;
+        color: $text-description;
         line-height: 1.6;
+        margin-top: 0;
         font-size: 0.9rem;
       }
     }
@@ -195,19 +202,53 @@ body {
   }
 
   .main-section-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: $text-dark;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $text-dark;
+    letter-spacing: 1px;
+  }
+
+  .education {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $text-dark;
+    margin-top: 5.5rem;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid $text-dark;
     letter-spacing: 1px;
   }
 
+
+
   .timeline-item {
     display: flex;
     margin-bottom: 10px;
     position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: calc(1.7rem + 16px);
+      width: 2px;
+      height: calc(100% + 10px);
+      background-color: $text-dark;
+    }
+
+    &:last-child::after {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: calc(1.7rem + 16px);
+      width: 2px;
+      height: 60px;
+      background-color: $text-dark;
+    }
 
     .timeline-marker {
       width: 16px;
@@ -219,17 +260,6 @@ body {
       margin-top: 1.5rem;
       flex-shrink: 0;
       position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 100%;
-        width: 2px;
-        height: 60px;
-        background-color: $text-dark;
-        transform: translateX(-50%);
-      }
     }
 
     .timeline-content {
@@ -237,22 +267,25 @@ body {
 
       .job-header {
         display: flex;
-        gap: 2rem;
 
         .job-title {
           min-width: 200px;
 
           h3 {
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 700;
             color: $text-dark;
+            margin-bottom: 0;
           }
 
-          h4 {
-            font-size: 0.9rem;
+          h4 {  
+            font-size: 1.1rem;
             font-weight: bold;
+            font-size: medium;
+            margin-top: 0;
             color: $text-dark;
-            margin-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 0;
           }
 
           .job-date {
@@ -266,15 +299,15 @@ body {
           flex: 1;
 
           h4 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: $text-dark;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
           }
 
           p {
             font-size: 0.85rem;
-            color: $text-light;
+            color: $text-description;
             line-height: 1.5;
             margin: 0;
           }
@@ -290,6 +323,7 @@ body {
     .reference-item {
       display: flex;
       margin-bottom: 2rem;
+      position: relative;
 
       .timeline-marker {
         width: 16px;
@@ -301,17 +335,26 @@ body {
         margin-top: 1.5rem;
         flex-shrink: 0;
         position: relative;
-  
-        &::after {
-          content: '';
-          position: absolute;
-          left: 50%;
-          top: 100%;
-          width: 2px;
-          height: 60px;
-          background-color: $text-dark;
-          transform: translateX(-50%);
-        }
+      }
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: calc(1.7rem + 16px);
+        width: 2px;
+        height: calc(100% + 2rem);
+        background-color: $text-dark;
+      }
+
+      &:last-child::after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: calc(1.7rem + 16px);
+        width: 2px;
+        height: 60px;
+        background-color: $text-dark;
       }
 
       
@@ -321,7 +364,6 @@ body {
 
         .reference-header {
           display: flex;
-          gap: 2rem;
 
           .reference-name {
             min-width: 200px;
@@ -344,28 +386,31 @@ body {
             flex: 1;
 
             h4 {
-              font-size: 1rem;
+              font-size: 1.1rem;
               font-weight: bold;
               color: $text-dark;
-              margin-bottom: 0.5rem;
+              margin-bottom: 0;
             }
 
             p {
               font-size: 0.85rem;
-              color: $text-light;
+              color: $text-description;
               line-height: 1.5;
-              margin-bottom: 0.5rem;
+              margin-top: 0;
+              margin-bottom: 0;
+    
 
-              &:last-child {
-                margin-bottom: 0;
-              }
+             &:last-child {
+                margin-top: 0;
+               margin-bottom: 0;
+             }
             }
           }
         }
       }
     }
   }
-}
+
 
 @media (max-width: 768px) {
   .sidebar {
