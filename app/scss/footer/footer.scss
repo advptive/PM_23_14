@@ -41,8 +41,6 @@
         background-color: $text-dark;
       }
 
-      
-
       .reference-content {
         flex: 1;
 
@@ -60,7 +58,7 @@
             }
 
             .reference-title {
-              font-size: 0.8rem;
+              font-size: 0.9rem;
               color: $text-light;
               margin: 0;
             }
@@ -76,6 +74,7 @@
               margin-bottom: 0;
             }
 
+
             p {
               font-size: 0.85rem;
               color: $text-description;
@@ -89,6 +88,8 @@
                margin-bottom: 0;
              }
             }
+
+           
           }
         }
       }

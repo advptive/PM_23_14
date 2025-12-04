@@ -7,36 +7,35 @@
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="container-fluid p-0">
-    <div class="row g-0 min-vh-100">
-
-        <!-- Sidebar -->
-        <div class="col-md-4 sidebar">
-            <div id="sidebar"> @@include('./components/sidebar/sidebar.html')</div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="col-md-8 main-content">
-
-            <!-- Header -->
-            <div id="header">@@include('./components/header/header.html')</div>
-
-            <!-- Main Content -->
-            <div id="main-content">
-                @@include('./components/main-content/main-body.html')
+<div class="box-bg">
+    <div class="container-lg">
+        <div class="row g-0 min-vh-100">
+            <!-- Sidebar -->
+            <div class="col-md-1 sidebar">
+                <div id="sidebar"> @@include('./components/sidebar/sidebar.html')</div>
             </div>
 
-            <!-- Footer -->
-            <div id="footer"> @@include('./components/footer/footer.html')</div>
+            <!-- Main Content -->
+            <div class="col-md-2 main-content">
+
+                <!-- Header -->
+                <div id="header">@@include('./components/header/header.html')</div>
+
+                <!-- Main Content -->
+                <div id="main-content">
+                    @@include('./components/main-content/main-body.html')
+                </div>
+
+                <!-- Footer -->
+                <div id="footer">
+                     @@include('./components/footer/footer.html')
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-<script type="module" src="./js/main.js"></script>
+</div> 
 </body>
 </html>
 

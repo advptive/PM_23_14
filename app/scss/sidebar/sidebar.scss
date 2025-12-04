@@ -17,7 +17,7 @@
         justify-content: center;
         margin-bottom: 2rem;
   
-        .profile-image {
+        .profile-picture {
           width: 180px;
           height: 180px;
           border-radius: 50%;
@@ -25,18 +25,23 @@
           outline: 4px solid white;
           outline-offset: 10px;
         }
+
+        .profile-image {
+          display: block;
+        }
       }
     }
   
     .section-title {
-      font-size: 1.1rem;
-      font-weight: bold;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: "Open Sans", sans-serif;
       display: flex;
       align-items: center;
       margin-top: 3rem;
       margin-bottom: 2rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 2px solid rgb(255, 255, 255);
       letter-spacing: 1px;
   
     }
