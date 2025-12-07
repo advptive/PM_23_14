@@ -67,12 +67,12 @@ function serve() {
 }
 
 const bootstrapCSS = () => {
-    return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    return src('https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css')
         .pipe(dest('dist/css'));
 }
 
 const bootstrapJS = () => {
-    return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    return src('https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI')
         .pipe(dest('dist/js'));
 }
 
