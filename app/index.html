@@ -1,21 +1,43 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>landing</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Anderson - Web Design & Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-<div class = "resume">
-    <div class = "resume__container">
-        @@include('components/sidebar/sidebar.html')
+<div class="box-bg">
+    <div class="container-lg">
+        <div class="row g-0 min-vh-100">
+            <!-- Sidebar -->
+            <div class="col-md-1 sidebar">
+                <div id="sidebar"> @@include('./components/sidebar/sidebar.html')</div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-2 main-content">
+
+                <!-- Header -->
+                <div id="header">@@include('./components/header/header.html')</div>
+
+                <!-- Main Content -->
+                <div id="main-content">
+                    @@include('./components/main-content/main-body.html')
+                </div>
+
+                <!-- Footer -->
+                <div id="footer">
+                     @@include('./components/footer/footer.html')
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<script src="js/bundle.min.js"></script>
+</div> 
+<script src="./js/bundle.min.js"></script>
 </body>
 </html>
+
