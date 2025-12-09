@@ -4,10 +4,27 @@
     padding: 2rem 3rem;
     background-color: white;
 
+    .main-section-title {
+      cursor: pointer;
+
+      i {
+        transition: transform 0.3s ease;
+        display: inline-block;
+      }
+
+      i.rotated {
+        transform: rotate(180deg);
+      }
+    }
+
     .reference-item {
       display: flex;
       margin-bottom: 2rem;
       position: relative;
+
+      &.section-content-hidden {
+        display: none !important;
+      }
 
       .timeline-marker {
         width: 15px;

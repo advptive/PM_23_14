@@ -98,4 +98,59 @@ function renderExperienceItems() {
 
 document.addEventListener('DOMContentLoaded', function() {
     renderExperienceItems();
+    initSectionToggles();
 });
+
+function initSectionToggles() {
+    const experienceTitle = document.querySelector('.experience-section .main-section-title');
+    if (experienceTitle) {
+        experienceTitle.addEventListener('click', function() {
+            const arrow = this.querySelector('i');
+            const section = this.closest('.experience-section');
+            const content = section.querySelectorAll('.timeline-item');
+            
+            content.forEach(item => {
+                item.classList.toggle('section-content-hidden');
+            });
+            
+            if (arrow) {
+                arrow.classList.toggle('rotated');
+            }
+        });
+    }
+    
+    const educationTitle = document.querySelector('.education-section .education');
+    if (educationTitle) {
+        educationTitle.addEventListener('click', function() {
+            const arrow = this.querySelector('i');
+            const section = this.closest('.education-section');
+            const content = section.querySelectorAll('.timeline-item');
+            
+            content.forEach(item => {
+                item.classList.toggle('section-content-hidden');
+            });
+            
+            if (arrow) {
+                arrow.classList.toggle('rotated');
+            }
+        });
+    }   
+    
+    const referenceTitle = document.querySelector('.references-section .main-section-title');
+    if (referenceTitle) {
+        referenceTitle.addEventListener('click', function() {
+            const arrow = this.querySelector('i');
+            const section = this.closest('.references-section');
+            const content = section.querySelectorAll('.reference-item');
+
+
+        content.forEach(item => {
+            item.classList.toggle('section-content-hidden');
+        });
+
+        if(arrow) {
+            arrow.classList.toggle('rotated');
+        }
+    });
+  }
+}
